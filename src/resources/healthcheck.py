@@ -19,8 +19,7 @@ router = APIRouter()
 })
 async def run_healthcheck(conn: Session = Depends(get_conn)):
     """
-    Make sure that all the internal and dependent systems are up and healthy.
-
+    Função responsável por indicar se a API está operante.
     :param conn: Conexão com o banco de dados.
     :return: Status da API.
     """
@@ -31,6 +30,6 @@ async def run_healthcheck(conn: Session = Depends(get_conn)):
         return JSONResponse(
             status_code=500,
             content=dict(
-                message="SQLAlchemy returned an error.",
+                message="SQLAlchemy retornou um erro.",
                 details=" ".join(error.args)
             ))
