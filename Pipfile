@@ -13,6 +13,9 @@ pydantic = "*"
 alembic = "*"
 psycopg2 = "*"
 python-dotenv = "*"
+pytest = "*"
+coverage = "*"
+requests = "*"
 
 [requires]
 python_version = "3.8"

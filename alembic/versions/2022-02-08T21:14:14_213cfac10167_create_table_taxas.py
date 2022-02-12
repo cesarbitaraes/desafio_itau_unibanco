@@ -33,3 +33,5 @@ def upgrade():
 
 def downgrade():
     op.drop_table('taxa')
+    op.execute('DROP TYPE ClientOptions')
+    op.execute('DROP TYPE TaxType')

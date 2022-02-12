@@ -2,7 +2,6 @@ import datetime
 
 from fastapi import APIRouter, Depends
 from fastapi.responses import JSONResponse
-from pydantic import ValidationError
 
 from src.models.fees import Taxas
 from src.services.database import get_conn, Session
@@ -80,7 +79,6 @@ async def update_fees(fee_id: int, fee_payload: FeeUpdate, conn: Session = Depen
     updated, nova_taxa = taxa_cadastrada.update(conn, **fee_payload.dict())
 
     if not updated:
-        print(nova_taxa)
         return JSONResponse(
             status_code=500,
             content="Ocorreu um erro ao salvar a taxa."
