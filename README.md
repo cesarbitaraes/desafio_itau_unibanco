@@ -120,6 +120,8 @@ $ docker exec desafio-itau-api coverage run -m pytest
 $ docker exec desafio-itau-api coverage report -m
 ```
 
+Atualmente essa API contém uma cobertura de testes de 92% de seu código.
+
 ### Dependências
 
 Caso seja necessário adicionar dependências no projeto, as mesmas devem ser incluídas nos arquivos `requirements.txt` utilizando o `pipenv`.
