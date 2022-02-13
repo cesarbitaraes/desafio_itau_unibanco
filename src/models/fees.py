@@ -23,10 +23,6 @@ class Taxas(BasicModel, BaseModel):
     tax_dt_criacao = Column(DateTime, server_default="current_timestamp", nullable=False)
     tax_dt_atualizacao = Column(DateTime, nullable=True)
 
-    def __repr__(self):
-        return f'pk={self.tax_pk_taxa}, {self.tax_en_cliente}, {self.tax_en_tipo}, {self.tax_vl_valor},' \
-               f' {self.tax_dt_criacao}, {self.tax_dt_atualizacao}'
-
     @classmethod
     def obtem_taxa_por_cliente_e_tipo(cls,
                                       db_session: Session,

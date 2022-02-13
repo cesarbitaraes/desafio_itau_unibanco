@@ -39,6 +39,15 @@ def valid_fee_post_payload():
 
 
 @pytest.fixture
+def another_valid_fee_post_payload():
+    return {
+        "segmento": "VAREJO",
+        "tipo_taxa": "MOEDA_ESTRANGEIRA",
+        "valor_taxa": 0.15
+    }
+
+
+@pytest.fixture
 def invalid_fee_post_payload():
     return {
         "segmento": "SEGMENTO",
@@ -46,10 +55,45 @@ def invalid_fee_post_payload():
         "valor_taxa": 0
     }
 
+
+@pytest.fixture
+def valid_fee_patch_payload():
+    return {
+        "tipo_taxa": "MOEDA_ESTRANGEIRA",
+        "valor_taxa": 0.2
+    }
+
+
+@pytest.fixture
+def invalid_fee_patch_payload():
+    return {
+        "tipo_taxa": "SEGMENTO",
+        "valor_taxa": 0
+    }
+
+
 @pytest.fixture
 def valid_calculate_foreign_currency_post_payload():
     return {
         "segmento": "PRIVATE",
         "quantidade_moeda_estrangeira": 1000,
+        "taxa_conversao": 5.46
+    }
+
+
+@pytest.fixture
+def invalid_calculate_foreign_currency_post_payload():
+    return {
+        "segmento": "PRIVATE",
+        "quantidade_moeda_estrangeira": 0,
+        "taxa_conversao": 0
+    }
+
+
+@pytest.fixture
+def unregistered_fee_calculate_foreign_currency_post_payload():
+    return {
+        "segmento": "VAREJO",
+        "quantidade_moeda_estrangeira": 1500,
         "taxa_conversao": 5.46
     }
