@@ -88,7 +88,7 @@ $ docker-compose build
 $ docker-compose up
 ```
 A partir desse ponto todos os containers estarão disponíveis.
-Para acessar o `swagger` da aplicação basta acessar o endereço `http://localhost:5000/docs`.
+Para acessar o `swagger` da aplicação basta abrir em seu navegador o endereço `http://localhost:5000/docs`.
 Toda a documentação da API está disponível em `http://localhost:5000/redoc`.
 
 ### Rotas implementadas:
