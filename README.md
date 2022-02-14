@@ -7,7 +7,7 @@ Hoje a única métrica implementada é a conversão de moeda estrangeira em reai
 
 ## Tecnologias
 
-A implementação foi realizado utilizando Python na versão 3.8.10 com as seguintes bibliotecas:
+A implementação foi realizado utilizando Python na versão 3.7 com as seguintes bibliotecas:
 
  - FastAPI
  - sqlalchemy
